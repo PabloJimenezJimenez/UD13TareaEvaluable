@@ -40,6 +40,7 @@ public class Pantalla {
 		if(figuras.size()==0) {//Si no hay figuras me muestra un mensaje de no hay figuras
 			System.out.println("No tienes figuras para dibujar");
 		}else {
+			System.out.println("Las figuras que has añadido son: ");
 			for(Figura figura : figuras) {
 				figura.dibujar();
 				System.out.println();
