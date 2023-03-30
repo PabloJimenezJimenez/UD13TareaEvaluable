@@ -1,6 +1,6 @@
 package tareaEvaluable;
 
-public class Triangulo implements Figura{
+public class Triangulo implements Figura{//Implemento la interfaz Figura
 	private int lado;
 	private String tipo;
 	private char character;
@@ -10,10 +10,13 @@ public class Triangulo implements Figura{
 		this.tipo = tipo;
 		this.character = character;
 	}
+	//Devuelvo el nombre de la figura
 	@Override
 	public String nombre() {
 		return "Triangulo";
 	}
+	
+	//Dibujo la figura en pantalla dependiendo del tipo
 	@Override
 	public void dibujar() {
 		int matriz[][]= new int [lado][lado];
@@ -57,21 +60,28 @@ public class Triangulo implements Figura{
 		
 		
 	}
+	
+	//Devuelvo el area de la figura
 	@Override
 	public int area() {
 		return (lado*lado)/2;
 	}
+	
+	//Cambio el caracter con el que se dibuja la figura
 	@Override
 	public void setCharacter(char a) {
 		this.character=a;
 		
 	}
+	
+	//Obtengo el caracter de la figura
 	@Override
 	public char getCharacter() {
 		return(character);
 		
 	}
 	
+	//Cambio el tipo de triangulo
 	public void setTipo(String tipo) {
 		if(tipo.equalsIgnoreCase("a")) {
 			this.tipo = "a";
